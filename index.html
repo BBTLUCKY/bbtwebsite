@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BBT Entertainment Hub | Anime, Web Series & Movies Info</title>
+
+<meta name="description" content="BBT Entertainment Hub is your complete platform to explore latest Anime, Web Series and Movies information from around the world. Stay updated with trending entertainment content.">
+
+<meta name="keywords" content="Anime, Web Series, Movies, BBT Entertainment Hub, Lakshay Sharma, Latest Anime Info, Trending Movies, Entertainment Website">
+
+<meta name="author" content="Lakshay Sharma">
+
+<meta property="og:title" content="BBT Entertainment Hub">
+<meta property="og:description" content="Explore latest Anime, Web Series and Movies in one place.">
+<meta property="og:type" content="website">
+
+<meta name="robots" content="index, follow">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<style>
+
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:#0f0f0f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+    background:#111;
+    text-align:center;
+    padding:20px 10px;
+    border-bottom:1px solid #222;
+}
+
+header h1{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+header h2{
+    font-size:16px;
+    color:#aaa;
+    font-weight:400;
+}
+
+.owner{
+    margin-top:6px;
+    font-size:14px;
+    color:#777;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+    background:#111;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid #222;
+}
+
+.navbar{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:10px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#ccc;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:white;
+}
+
+/* ===== HERO ===== */
+.hero{
+    position:relative;
+    height:300px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+}
+
+.hero-video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+}
+
+.hero-text{
+    position:relative;
+    font-size:24px;
+    text-align:center;
+    padding:10px 20px;
+}
+
+/* ===== SECTION ===== */
+section{
+    padding:50px 20px;
+    text-align:center;
+    max-width:1200px;
+    margin:auto;
+}
+
+section p{
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+/* ===== CARDS ===== */
+.platforms{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:25px;
+}
+
+.card{
+    position:relative;
+    border-radius:12px;
+    overflow:hidden;
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+}
+
+/* overlay */
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.play{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:38px;
+    opacity:0;
+    transition:0.3s;
+}
+
+.title{
+    position:absolute;
+    bottom:10px;
+    left:15px;
+    font-weight:600;
+    font-size:18px;
+}
+
+.rating{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background:#e50914;
+    padding:4px 8px;
+    border-radius:6px;
+    font-size:13px;
+}
+
+/* Hover */
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card:hover::after{
+    background:rgba(0,0,0,0.6);
+}
+
+.card:hover .play{
+    opacity:1;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    background:#111;
+    padding:20px;
+    text-align:center;
+    color:#777;
+    margin-top:40px;
+    border-top:1px solid #222;
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+
+    header h1{
+        font-size:22px;
+    }
+
+    .hero{
+        height:220px;
+    }
+
+    .hero-text{
+        font-size:18px;
+    }
+
+    .navbar{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .card img{
+        height:240px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>BBT Entertainment Hub</h1>
+    <h2>Animes / Web Series / Movies</h2>
+    <div class="owner">Owner: Lakshay Sharma</div>
+</header>
+
+<nav>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="WebSeries.html">Web Series</a></li>
+        <li><a href="movies.html">Movies</a></li>
+    </ul>
+</nav>
+
+<div class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+        <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+        Unlimited Anime, Web Series & Movies Info
+    </div>
+</div>
+
+<section>
+
+<p>
+Our website is a complete entertainment platform where users can explore detailed information about the latest and most popular anime, web series, and movies from around the world.
+</p>
+
+<h3>Click on Platforms to Visit</h3>
+
+<div class="platforms">
+
+<a href="anime.html">
+<div class="card">
+<img src="https://images-platform.99static.com/0VOtvr_ngejAFm1cR38inRUl2Cw=/0x0:1500x1500/fit-in/99designs-contests-attachments/74/74431/attachment_74431022" alt="Anime Collection">
+<div class="rating">⭐ 9.5</div>
+<div class="play">▶</div>
+<div class="title">Anime</div>
+</div>
+</a>
+
+<a href="WebSeries.html">
+<div class="card">
+<img src="https://media.ibc24.in/wp-content/uploads/2022/11/1_CVi07clwRXj1HLJBEMaxWg.jpg-final.jpg" alt="Web Series Collection">
+<div class="rating">⭐ 9.2</div>
+<div class="play">▶</div>
+<div class="title">Web Series</div>
+</div>
+</a>
+
+<a href="movies.html">
+<div class="card">
+<img src="https://cdn.dribbble.com/userupload/45465630/file/84fadb7a321b0d8bbf8c1a1082b2d526.png?format=webp&resize=400x300&vertical=center" alt="Movies Collection">
+<div class="rating">⭐ 9.0</div>
+<div class="play">▶</div>
+<div class="title">Movies</div>
+</div>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 BBT Entertainment Hub | Designed by Lakshay Sharma
+</footer>
+
+</body>
+</html>
