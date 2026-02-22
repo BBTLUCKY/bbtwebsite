@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="v4Bv6LyC9NON7RSCgFS0-HJA9F-dNIqglxIQol2tyDM" />
 
 <title>BBT Entertainment Hub | Anime, Web Series & Movies Info</title>
 
@@ -13,17 +12,12 @@
 
 <meta name="author" content="Lakshay Sharma">
 
-<meta property="og:title" content="BBT Entertainment Hub">
-<meta property="og:description" content="Explore latest Anime, Web Series and Movies in one place.">
-<meta property="og:type" content="website">
-
-<meta name="robots" content="index, follow">
-
 <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 
-/* ===== RESET ===== */
 *{
     margin:0;
     padding:0;
@@ -40,9 +34,31 @@ body{
 /* ===== HEADER ===== */
 header{
     background:#111;
-    text-align:center;
-    padding:20px 10px;
+    padding:20px 40px;
     border-bottom:1px solid #222;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.header-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/* LOGO */
+.logo{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+/* TEXT BLOCK */
+.header-text{
+    display:flex;
+    flex-direction:column;
 }
 
 header h1{
@@ -62,6 +78,23 @@ header h2{
     color:#777;
 }
 
+/* ===== SOCIAL ICONS ===== */
+.social-icons{
+    display:flex;
+    gap:18px;
+    align-items:center;
+}
+
+.social-icons a{
+    color:#ccc;
+    font-size:20px;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    color:white;
+}
+
 /* ===== NAVBAR ===== */
 nav{
     background:#111;
@@ -76,17 +109,20 @@ nav{
     display:flex;
     justify-content:center;
     gap:25px;
-    padding:10px;
+    padding:12px;
 }
 
 .navbar a{
     text-decoration:none;
     color:#ccc;
     font-size:15px;
+    padding:6px 14px;
+    border-radius:6px;
     transition:0.3s;
 }
 
 .navbar a:hover{
+    background:#1c1c1c;
     color:white;
 }
 
@@ -156,7 +192,6 @@ section p{
     display:block;
 }
 
-/* overlay */
 .card::after{
     content:"";
     position:absolute;
@@ -193,7 +228,6 @@ section p{
     font-size:13px;
 }
 
-/* Hover */
 .card:hover{
     transform:translateY(-5px);
 }
@@ -218,6 +252,12 @@ footer{
 
 /* ===== MOBILE ===== */
 @media(max-width:768px){
+
+    header{
+        flex-direction:column;
+        text-align:center;
+        gap:12px;
+    }
 
     header h1{
         font-size:22px;
@@ -248,9 +288,25 @@ footer{
 <body>
 
 <header>
-    <h1>BBT Entertainment Hub</h1>
-    <h2>Animes / Web Series / Movies</h2>
-    <div class="owner">Owner: Lakshay Sharma</div>
+
+<div class="header-left">
+
+    <img src="BBTHub logo.jpg" alt="BBT Hub Logo" class="logo">
+
+    <div class="header-text">
+        <h1>BBT Entertainment Hub</h1>
+        <h2>Animes / Web Series / Movies</h2>
+        <div class="owner">Owner: Lakshay Sharma</div>
+    </div>
+
+</div>
+
+<div class="social-icons">
+    <a href="https://www.instagram.com/lakshay_sharma24?igsh=ZzZ5cDVxbTNpYWVr"><i class="fab fa-instagram"></i></a>
+    <a href="https://snapchat.com/t/EYb5wAWL"><i class="fab fa-snapchat-ghost"></i></a>
+    <a href="https://www.facebook.com/share/1KW6jY3PWi/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+</div>
+
 </header>
 
 <nav>
@@ -313,7 +369,7 @@ Our website is a complete entertainment platform where users can explore detaile
 </div>
 
 </section>
-    <section>
+<section>
 <h2>🔒 Discover Our Special Entertainment App</h2>
 
 <p>
@@ -335,13 +391,10 @@ Click on image below to explore more about this exclusive feature.
 </a>
 </section>
 
+
 <footer>
 © 2026 BBT Entertainment Hub | Designed by Lakshay Sharma
 </footer>
 
 </body>
-
 </html>
-
-
-
